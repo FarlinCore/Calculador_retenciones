@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cal-impuestos</title>
+</head>
+<body>
+    <script>
+        document.write("CALCULADORA DE IMPUESTOS POR RENTA")
+        let sueldo = parseFloat(prompt(("¿Cual es tu sueldo mensual?")));
+        let sueldo_anual = sueldo * 12;
+        if(sueldo_anual <= 416220.00){
+            alert("estas exento de impuestos por renta");
+        }
+        else if(sueldo_anual > 416220.00 && sueldo_anual <= 624329.00){
+            let impuesto_mensual = ((sueldo_anual-416220.00)*0.15)/12;
+            alert("El impuesto que pagaras cada mes por renta es: "+impuesto_mensual);
+        }
+        else if(sueldo_anual > 624329.00 && sueldo_anual <= 867123.00){
+            let impuesto_mensual = ((31216.00+(((sueldo_anual-624329.00)*0.20)))/12);
+            alert("El impuesto que pagaras cada mes por renta es: "+ impuesto_mensual);
+        }
+        else if(sueldo_anual > 867123.00){
+            let impuesto_mensual = ((79776.00+(((sueldo_anual-867123.00)*0.25)))/12);
+            alert("El impuesto que pagaras cada mes por renta es: "+ impuesto_mensual);
+        }
+        
+    </script>
+</body>
+</html>
